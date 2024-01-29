@@ -1,4 +1,5 @@
 ﻿/*-------------------------------------------------------------------------------------------------------------------------------------*/
+// TCP/IP Adapter Change Application
 
 using System.Net.NetworkInformation;
 using TCIPChangeClassStandard;
