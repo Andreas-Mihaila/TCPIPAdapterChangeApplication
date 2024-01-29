@@ -61,7 +61,7 @@ Console.WriteLine("---------------------------------------------\n");
 
 NetworkAdapter = NetworkConfiguratorAdvanced.GetNetworkInterface(strMACAddress);
 
-Console.WriteLine("Your current Ethernet Network Adapter: " + NetworkAdapter.Name);
+Console.WriteLine($"Your current Ethernet Network Adapter: {NetworkAdapter.Name}");
 Console.WriteLine("---------------------------------------------\n");
 
 Console.WriteLine("Do you want to use DHCP? y/n");
