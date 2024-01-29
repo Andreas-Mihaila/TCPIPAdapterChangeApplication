@@ -21,8 +21,8 @@ NetworkConfigurator NetworkConfigurator = new NetworkConfigurator();
 
 /*-------------------------------------------------------------------------------------------------------------------------------------*/
 
-Console.WriteLine("---------------------------------------------");
-Console.WriteLine("-------Network Configurator Appication-------\r");
+Console.WriteLine("---------------------------------------------\n");
+Console.WriteLine("-------Network Configurator Application-------\n");
 Console.WriteLine("---------------------------------------------\n");
 
 Console.WriteLine("Select Network Adapter: \n");
@@ -32,7 +32,7 @@ Console.WriteLine("3 - Amazon Gigabit Ethernet Adapter \n");
 Console.WriteLine("4 - WiFi Ethernet Adapter \n");
 Console.WriteLine("---------------------------------------------\n");
 
-Console.WriteLine("Select Network Adapter: ");
+Console.WriteLine("Select Network Adapter: \n");
 
 iNetworkAdapterNumber = Convert.ToInt32(Console.ReadLine());
 
@@ -61,10 +61,10 @@ Console.WriteLine("---------------------------------------------\n");
 
 NetworkAdapter = NetworkConfiguratorAdvanced.GetNetworkInterface(strMACAddress);
 
-Console.WriteLine($"Your current Ethernet Network Adapter: {NetworkAdapter.Name}");
+Console.WriteLine($"Your current Ethernet Network Adapter: {NetworkAdapter.Name}\n");
 Console.WriteLine("---------------------------------------------\n");
 
-Console.WriteLine("Do you want to use DHCP? y/n");
+Console.WriteLine("Do you want to use DHCP? y/n\n");
 
 strDCHPDecision = Console.ReadLine();
 
@@ -76,7 +76,7 @@ if (strDCHPDecision == "y")
             NetworkConfigurator.SetDHCP(NetworkAdapter.Name);
 
             Console.Write("TCP - Configuration successfully changed ..\n");
-            Console.WriteLine("---------------------------------------------\n");
+            Console.WriteLine("---------------------------------------------");
 
         }
 
@@ -84,7 +84,7 @@ if (strDCHPDecision == "y")
         {
 
             Console.Write("TCP - Configuration successfully changed ..\n");
-            Console.WriteLine("---------------------------------------------\n");
+            Console.WriteLine("---------------------------------------------");
 
             //Console.Write("TCP - Configuration not changed - check following error message\n");
             //Console.Write("Exception Message: " + e.Message);
@@ -129,7 +129,7 @@ else
         {
 
             Console.Write("TCP - Configuration not changed - check following error message .. \n");
-            Console.Write("Exception Message: " + e.Message);
+            Console.Write($"Exception Message:  {e.Message}\n");
             Console.WriteLine("---------------------------------------------\n");
 
         } 
